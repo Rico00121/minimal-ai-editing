@@ -1,0 +1,4 @@
+interface:
+  display_name: "Minimal AI Editing"
+  short_description: "Minimally edit English thesis prose in the author’s voice"
+  default_prompt: "Use $minimal-ai-editing to minimally edit this English thesis passage while preserving my voice, citations, and LaTeX."
