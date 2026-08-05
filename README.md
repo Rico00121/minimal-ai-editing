@@ -57,6 +57,38 @@ git clone https://github.com/Rico00121/minimal-ai-editing.git ~/.agents/skills/m
 
 Agent 应根据自身环境选择技能目录，例如 Codex 使用 `~/.codex/skills`，Claude Code 使用 `~/.claude/skills`，采用通用 Agent Skills 目录的平台可以使用 `~/.agents/skills`。如果 Agent 没有联网、终端执行或目录写入权限，这种方式无法自动完成安装，需要改用上面的手动安装命令。
 
+### 样例对话
+
+**用户：**
+
+```text
+请从 https://github.com/Rico00121/minimal-ai-editing 安装 minimal-ai-editing Skill。
+安装前先检查目标目录，不要覆盖已有内容。完成后告诉我安装路径和调用方法。
+```
+
+**Agent：**
+
+```text
+当前环境使用 ~/.codex/skills 作为个人 Skills 目录。
+目标目录 minimal-ai-editing 不存在，仓库已经克隆到 ~/.codex/skills/minimal-ai-editing。
+我已确认 SKILL.md 存在。你可以在对话中使用 $minimal-ai-editing 调用它。
+```
+
+**用户：**
+
+```text
+请使用 $minimal-ai-editing 检查下面的英文论文段落。
+只修改明显的 AI 表达，每句话最多修改一个问题，并保留引用和 LaTeX。
+```
+
+**Agent：**
+
+```text
+请发送需要检查的英文段落。我会先给出最小化修改后的文本，再简短列出替换点。
+```
+
+实际安装路径和 Agent 回复可能因运行环境而不同。
+
 ## 使用
 
 在对话中直接指定：
