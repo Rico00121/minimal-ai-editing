@@ -44,6 +44,19 @@ git clone https://github.com/Rico00121/minimal-ai-editing.git ~/.agents/skills/m
 
 其他支持 `SKILL.md` 的 Agent，可以把本仓库克隆到该平台配置的技能目录中。仓库根目录本身就是完整的 Skill，不需要复制其中的文件。
 
+### 通过提示词让 Agent 自动安装
+
+如果当前 Agent 能够联网、执行 Git 命令并写入个人技能目录，可以直接发送下面这段提示词：
+
+```text
+请从 https://github.com/Rico00121/minimal-ai-editing 安装 minimal-ai-editing Skill。
+先识别当前 Agent 使用的个人 Skills 目录，再将仓库克隆到该目录下的 minimal-ai-editing 文件夹。
+不要修改仓库中的 SKILL.md。如果目标文件夹已经存在，不要直接覆盖，先检查现有安装并告诉我当前状态。
+安装后确认 SKILL.md 存在，并告诉我实际安装路径以及如何在对话中调用 $minimal-ai-editing。
+```
+
+Agent 应根据自身环境选择技能目录，例如 Codex 使用 `~/.codex/skills`，Claude Code 使用 `~/.claude/skills`，采用通用 Agent Skills 目录的平台可以使用 `~/.agents/skills`。如果 Agent 没有联网、终端执行或目录写入权限，这种方式无法自动完成安装，需要改用上面的手动安装命令。
+
 ## 使用
 
 在对话中直接指定：
