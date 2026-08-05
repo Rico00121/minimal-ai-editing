@@ -21,29 +21,6 @@
 
 ## 安装
 
-### Codex
-
-```bash
-mkdir -p ~/.codex/skills
-git clone https://github.com/Rico00121/minimal-ai-editing.git ~/.codex/skills/minimal-ai-editing
-```
-
-### Claude Code
-
-```bash
-mkdir -p ~/.claude/skills
-git clone https://github.com/Rico00121/minimal-ai-editing.git ~/.claude/skills/minimal-ai-editing
-```
-
-### 使用通用 Agent Skills 目录的 Agent
-
-```bash
-mkdir -p ~/.agents/skills
-git clone https://github.com/Rico00121/minimal-ai-editing.git ~/.agents/skills/minimal-ai-editing
-```
-
-其他支持 `SKILL.md` 的 Agent，可以把本仓库克隆到该平台配置的技能目录中。仓库根目录本身就是完整的 Skill，不需要复制其中的文件。
-
 ### 通过提示词让 Agent 自动安装
 
 如果当前 Agent 能够联网、执行 Git 命令并写入个人技能目录，可以直接发送下面这段提示词：
@@ -55,7 +32,7 @@ git clone https://github.com/Rico00121/minimal-ai-editing.git ~/.agents/skills/m
 安装后确认 SKILL.md 存在，并告诉我实际安装路径以及如何在对话中调用 $minimal-ai-editing。
 ```
 
-Agent 应根据自身环境选择技能目录，例如 Codex 使用 `~/.codex/skills`，Claude Code 使用 `~/.claude/skills`，采用通用 Agent Skills 目录的平台可以使用 `~/.agents/skills`。如果 Agent 没有联网、终端执行或目录写入权限，这种方式无法自动完成安装，需要改用上面的手动安装命令。
+Agent 应根据自身环境选择技能目录，例如 Codex 使用 `~/.codex/skills`，Claude Code 使用 `~/.claude/skills`，采用通用 Agent Skills 目录的平台可以使用 `~/.agents/skills`。如果 Agent 没有联网、终端执行或目录写入权限，这种方式无法自动完成安装，需要改用下面的手动安装命令。
 
 ### 样例对话
 
@@ -88,6 +65,29 @@ Agent 应根据自身环境选择技能目录，例如 Codex 使用 `~/.codex/sk
 ```
 
 实际安装路径和 Agent 回复可能因运行环境而不同。
+
+### Codex
+
+```bash
+mkdir -p ~/.codex/skills
+git clone https://github.com/Rico00121/minimal-ai-editing.git ~/.codex/skills/minimal-ai-editing
+```
+
+### Claude Code
+
+```bash
+mkdir -p ~/.claude/skills
+git clone https://github.com/Rico00121/minimal-ai-editing.git ~/.claude/skills/minimal-ai-editing
+```
+
+### 使用通用 Agent Skills 目录的 Agent
+
+```bash
+mkdir -p ~/.agents/skills
+git clone https://github.com/Rico00121/minimal-ai-editing.git ~/.agents/skills/minimal-ai-editing
+```
+
+其他支持 `SKILL.md` 的 Agent，可以把本仓库克隆到该平台配置的技能目录中。仓库根目录本身就是完整的 Skill，不需要复制其中的文件。
 
 ## 使用
 
